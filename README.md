@@ -151,4 +151,4 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 📌 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />
 
-**가격 예측 모델을 위한 준비 작업 완료!**
+![Image](https://github.com/user-attachments/assets/9ea4a854-3c87-499f-8537-69131683551d)
