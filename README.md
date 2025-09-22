@@ -10,7 +10,7 @@ EDA / ML mini project 5Team
 
 
 
-### 2. 프로젝트 개요
+### 🧳 프로젝트 개요
 - 프로젝트 명: 도쿄 예비 여행객들을 위한 숙소값 예측
 - 프로젝트 소개: 에어비앤비에서 제공하는 도쿄 숙소 리스트를 기반으로 숙소 조건과 가격의 관계를 분석함
 - 프로젝트 목표: 숙소 조건과 가격의 유의미한 관계를 포착하고, 나아가 조건별 숙소값을 예측
@@ -19,7 +19,7 @@ EDA / ML mini project 5Team
 - 에어비앤비에서 제공하는 데이터셋 분석으로 예약 가능 여부와 상관없이 숙소의 조건에 따른 가격 예측 가능
 
 
-### 3. 기술 스택
+### 💻 기술 스택
 | 분야 |	기술 |
 |------|---------|
 |언어 |  python 3.12|
@@ -29,7 +29,7 @@ EDA / ML mini project 5Team
 |버전 관리|github|
 
 
-### 4. WBS
+### 🪜 WBS
 |분류|상세업무|시작일|종료일|
 |---|---|---|---|
 |기획|1-1. 데이터셋 탐색 |09.15|09.16|
@@ -41,13 +41,13 @@ EDA / ML mini project 5Team
 |EDA|2-5. 데이터 정제 및 전처리 |09.18|09.20|
 
 
-### 📑 데이터셋
+### 💭 데이터셋
 - 파일명: `tokyo_listings.csv.gz`
 - 주요 칼럼: 숙소별 room type, 침실 개수, 1박당 가격 등
 - 데이터 출처: [Airbnb](https://insideairbnb.com/)
 
 
-### 6. EDA
+### 🪴 EDA
 **0. 프로젝트 방향 선정**
     - 숙소값에 큰 영향을 미치는 날짜별 가격 데이터를 조회
     - 성수기에 따른 추가 가격은 에어비앤비 측에서 미제공
@@ -140,7 +140,6 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />
 
 
-    
     
 **5. 데이터 정제 및 전처리**
     
