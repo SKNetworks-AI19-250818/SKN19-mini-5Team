@@ -107,7 +107,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     
 **4. 데이터 시각화를 통한 탐색**
 
-📌 각 특성 컬럼과 가격 컬럼의 상관관계 도출을 위한 시각화  
+📌 총 수용인원, 화장실수, 침실수, 침대수 등과 가격 컬럼의 상관관계 도출을 위한 시각화  
 <img width="1990" height="1990" alt="image" src="https://github.com/user-attachments/assets/f98a4fe1-aeb5-442e-9017-65d8b2f1ef10" />  
 
 📌 지역별 가격 관계 시각화  
