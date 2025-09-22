@@ -59,11 +59,15 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ```
 
 **2. 데이터 구조 및 기초 통계 확인**
-    - 불필요한 칼럼 1차 제거
 
-    - 데이터의 구조를 파악하기 위해 컬럼 정보와 데이터 타입을 확인한다.
-    - 데이터의 기본 통계 정보를 출력하여 각 변수의 분포와 특성을 살펴본다.
-    - df.head(), df.tail(), df.info(), df.describe() 등의 함수를 사용한다.
+📌 데이터의 기본 컬럼, 결측치, 데이터 타입 등 확인
+<img width="737" height="593" alt="Image" src="https://github.com/user-attachments/assets/ef8db27e-44f9-48a9-a0f8-fc52b4360cd9" />
+
+📌 데이터의 상위 5행 확인
+<img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />
+
+📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출
+<img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" />
     
     
 **3. 결측치 및 이상치 탐색**
