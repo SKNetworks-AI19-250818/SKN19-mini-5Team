@@ -105,6 +105,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="1773" height="723" alt="Image" src="https://github.com/user-attachments/assets/5761df43-69a6-41aa-97b2-276245bc9a11" />  
 <br>
 📌 개수가 적어 유의미하지 않은 값을 이상치로 처리하여 제거
+<br>
 <img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5af" />  
 <br>
 <br>
