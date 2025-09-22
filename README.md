@@ -6,7 +6,7 @@ EDA / ML mini project 5Team
 ### 🙋 팀 소개
 | 이름    | 김범섭 |  박도연  |  이상혁  |  이승원   |
 | ------- | -------|----------|----------|---------- |
-| git |   [](https://github.com/WhatSupYap)   |[](https://github.com/pdyeon999)  | [](https://github.com/sangpiri)    |    [](https://github.com/seungwon-sw)      |
+| git |   [WhatSupYap](https://github.com/WhatSupYap)   |[pdyeon999](https://github.com/pdyeon999)  | [sangpiri](https://github.com/sangpiri)    |    [seungwon-sw](https://github.com/seungwon-sw)      |
 
 
 
@@ -24,8 +24,8 @@ EDA / ML mini project 5Team
 |------|---------|
 |언어 |  python 3.12|
 |개발 환경|	Jupyter Notebook| 
-|데이터 처리|	Pandas, #013243|
-|시각화|	Matplotlib (pyplot), Seaborn|
+|데이터 처리|	Pandas, NumPy|
+|시각화|	Matplotlib, Seaborn|
 |버전 관리|github|
 
 
