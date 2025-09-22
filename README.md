@@ -105,16 +105,14 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     3) 숙소 위치별 가격 관찰
 <img width="974" height="697" alt="image" src="https://github.com/user-attachments/assets/3ad0af07-f3ef-4598-970d-dc1060a63662" />
 
-- 분석 3: 각 특성 컬럼과 price의 상관관계 도출을 위한 시각화
-
-
+    4) 각 특성 컬럼과 price의 상관관계 도출을 위한 시각화
 <img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/015fb5d7-b731-4792-823b-51c36823809e" />
 
-1) 사용 컬럼 : 총 리뷰 수, 12개월 리뷰 수, 30일 리뷰 수, 작년 1년 리뷰 수, 첫 리뷰 날짜, 마지막 리뷰 날짜, 첫 리뷰 후 지난 시간, price
+        1) 사용 컬럼 : 총 리뷰 수, 12개월 리뷰 수, 30일 리뷰 수, 작년 1년 리뷰 수, 첫 리뷰 날짜, 마지막 리뷰 날짜, 첫 리뷰 후 지난 시간, price
 
-2) 시각화 내용 : 사용 컬럼과 가격의 상관계수 히트맵
-
-3) 시각화 목적 : 사용 컬럼과 가격의 상관관계 분석
+        2) 시각화 내용 : 사용 컬럼과 가격의 상관계수 히트맵
+        
+        3) 시각화 목적 : 사용 컬럼과 가격의 상관관계 분석
 
   
 
