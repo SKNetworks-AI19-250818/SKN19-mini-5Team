@@ -79,7 +79,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 
 📌 특성이 있는 그룹별로 price가 상이할 것으로 예상되므로, 그룹별 price 평균치 확인 후 price 결측치를 특성 그룹별 평균값으로 대체  
 <img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" /> 
-<br>
+<br>  
 📌 price 이상치 탐색  
 <img width="217" height="198" alt="Image" src="https://github.com/user-attachments/assets/7b36904f-5379-4454-891c-9f5dd36e98af" />  
 <br>
