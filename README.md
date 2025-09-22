@@ -6,7 +6,11 @@ EDA / ML mini project 5Team
 ### 🙋 팀 소개
 | 이름    | 김범섭 |  박도연  |  이상혁  |  이승원   |
 | ------- | -------|----------|----------|---------- |
-| git |        | pdyeon999 |          |          |
+| git |   [<img width="360" height="152" alt="image" src="https://github.com/user-attachments/assets/e3768cc6-99c6-4f82-b6e9-bccb906185c5" />
+](https://github.com/WhatSupYap)   |[<img width="360" height="152" alt="image" src="https://github.com/user-attachments/assets/85b0d978-ba4b-41f8-9d37-70e315aa5d6d" />
+](https://github.com/pdyeon999)  | [<img width="360" height="152" alt="image" src="https://github.com/user-attachments/assets/f0433a55-e7e6-4c25-b79e-2f3a49b40541" />
+](https://github.com/sangpiri)         |    [<img width="360" height="152" alt="image" src="https://github.com/user-attachments/assets/03c80068-46ec-4e71-93fc-0501cc25aa3b" />
+](https://github.com/seungwon-sw)      |
 
 
 
