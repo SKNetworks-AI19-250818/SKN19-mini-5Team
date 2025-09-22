@@ -60,95 +60,83 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 
 **2. 데이터 구조 및 기초 통계 확인**
 
-📌 데이터의 기본 컬럼, 결측치, 데이터 타입 등 확인
-
+📌 데이터의 기본 컬럼, 결측치, 데이터 타입 등 확인  
 <img width="737" height="593" alt="Image" src="https://github.com/user-attachments/assets/ef8db27e-44f9-48a9-a0f8-fc52b4360cd9" />
+<br>
 
-
-📌 데이터의 상위 5행 확인
-
+📌 데이터의 상위 5행 확인  
 <img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />
+<br>
 
-
-📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출
-
-<img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" />
-    
+📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출  
+<img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" />    
+<br>
     
 **3. 결측치 및 이상치 탐색**
-    1. 숙소 조건 칼럼(bathrooms, bedrooms, beds) 결측치 처리
-    1-1. 숙소 조건 칼럼 이상치 처리
-    2. price 결측치 처리
-    2-1. price 이상치 처리
-    3. 
-    - 결측치(NaN) 값이 존재하는지 확인하고, 이를 처리하는 방법을 결정한다.
-    - 데이터에 존재하는 이상치(Outlier)를 탐지하고, 이를 어떻게 처리할지 결정한다.
-    - df.isnull().sum(), df.boxplot() 등의 함수를 활용한다.
+
+⭐ price 컬럼  
+
+📌 특성이 있는 그룹별로 price가 상이할 것으로 예상되므로, 그룹별 price 평균치 확인 후 price 결측치를 특성 그룹별 평균값으로 대체  
+<img width="217" height="198" alt="Image" src="https://github.com/user-attachments/assets/7b36904f-5379-4454-891c-9f5dd36e98af" />    
+<br>
+📌 price 이상치 탐색  
+<img width="1190" height="1181" alt="Image" src="https://github.com/user-attachments/assets/32e86853-3777-4ba7-9239-11d93f0f24db" />  
+<br>
+📌 이상치 기준을 정하기 위해 각 기준별로 시각화
+<img width="1190" height="1181" alt="Image" src="https://github.com/user-attachments/assets/4d528d73-97e6-47ba-b12c-5d7a6af44fe8" />
+<br>
+📌 이상치 제거  
+<img width="273" height="61" alt="Image" src="https://github.com/user-attachments/assets/9a660760-704b-4b78-b7b0-85e599450687" />  
+<br>
+
+⭐ 그 외 컬럼  
+
+📌 선정된 중요 컬럼의 결측치 제거 (ex. bathrooms, bedrooms, beds)  
+<img width="276" height="61" alt="Image" src="https://github.com/user-attachments/assets/0941ad01-6d45-4dcc-b6b6-6d4fb92ade78" />  
+<br>
+📌 선정된 중요 컬럼의 이상치 확인을 위한 각 컬럼이 갖고 있는 고유값과 그 개수 확인  
+<img width="1781" height="201" alt="Image" src="https://github.com/user-attachments/assets/98420866-dfdc-44cf-a0d4-f846a4f02e16" />  
+<img width="1778" height="491" alt="Image" src="https://github.com/user-attachments/assets/da6eee1c-4c9e-4afa-9e75-d834e884391b" />  
+<img width="1776" height="582" alt="Image" src="https://github.com/user-attachments/assets/c4156490-3d34-4a37-82b0-74b0cb5339aa" />  
+<img width="1777" height="390" alt="Image" src="https://github.com/user-attachments/assets/8db609e8-0b5f-4ca1-a726-d63a0cba9aba" />  
+<img width="1773" height="723" alt="Image" src="https://github.com/user-attachments/assets/5761df43-69a6-41aa-97b2-276245bc9a11" />  
+<br>
+📌 개수가 적어 유의미하지 않은 값을 이상치로 처리 (ex. bathrooms이나 bedrooms 개수가 15개를 초과하는 경우 등)  
+<img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5af" />  
+<br>
     
 **4. 데이터 시각화를 통한 탐색**
 
-    1-1) 각 특성 컬럼과 가격 컬럼의 상관관계 도출을 위한 시각화
-<img width="1990" height="1990" alt="image" src="https://github.com/user-attachments/assets/f98a4fe1-aeb5-442e-9017-65d8b2f1ef10" />
+📌 각 특성 컬럼과 가격 컬럼의 상관관계 도출을 위한 시각화  
+<img width="1990" height="1990" alt="image" src="https://github.com/user-attachments/assets/f98a4fe1-aeb5-442e-9017-65d8b2f1ef10" />  
 
-    1-2) 지역별 가격 관계 시각화
-<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/908d9c70-ea96-4176-94aa-ff34eee18ebb" />
+📌 지역별 가격 관계 시각화  
+<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/908d9c70-ea96-4176-94aa-ff34eee18ebb" />  
 
-    1-3) 룸 타입별 가격 관계 시각화
-<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/41741568-f418-45c1-a7bc-52e83ed4674d" />
+📌 룸 타입별 가격 관계 시각화  
+<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/41741568-f418-45c1-a7bc-52e83ed4674d" />  
 
-```
-- 수치형 컬럼
-  - 수치형 컬럼의 산점도를 봤을 때는 상관관계를 파악하기 어려우나, 선형회귀선을 보면 선형관계를 도출할 수 있음
-  - 많은 수용가능인원, 많은 화장실 개수, 많은 침실 개수, 많은 침대 개수, 많은 1년 내의 리뷰 개수, 높은 평점이 높은 가격과 선형관계가 있는 것으로 보아 일반적 통념에 부합
-   
-- 범주형 컬럼
-  - 범주형 컬럼은 범주값이 많아 price를 x축으로 설정 및 수평형 박스플롯을 그린 후, 중위값 상위 순서대로 정렬
-  - 중위값과 평균값 비교를 위해 평균값도 빨간점으로 표기
-  - 선호되는 특정 지역의 가격이 높은 것을 확인할 수 있었음
-  - 단순히 특정 룸만 대여하는 것보다 전체를 대여하는 것이 가격이 높음을 확인할 수 있으며, 룸을 공유하는 것이 가격이 가장 낮은 것으로 보아 일반적 통념에 부합함
-```
+📌 리뷰 평점 관련 칼럼 간 히트맵 도출  
+<img width="939" height="709" alt="image" src="https://github.com/user-attachments/assets/dad157a6-bea1-4a60-a27d-5b71c0114cc2" />  
 
-    2) 리뷰 평점 관련 칼럼 간 heatmap 도출
-<img width="939" height="709" alt="image" src="https://github.com/user-attachments/assets/dad157a6-bea1-4a60-a27d-5b71c0114cc2" />
+📌 숙소 위치별 가격 관찰  
+<img width="974" height="697" alt="image" src="https://github.com/user-attachments/assets/3ad0af07-f3ef-4598-970d-dc1060a63662" />  
 
-    3) 숙소 위치별 가격 관찰
-<img width="974" height="697" alt="image" src="https://github.com/user-attachments/assets/3ad0af07-f3ef-4598-970d-dc1060a63662" />
+📌 각 특성 컬럼과 price의 상관관계 도출을 위한 시각화
+<img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/015fb5d7-b731-4792-823b-51c36823809e" />    
 
-    4) 각 특성 컬럼과 price의 상관관계 도출을 위한 시각화
-<img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/015fb5d7-b731-4792-823b-51c36823809e" />
+📌 각종 리뷰 수와 가격의 상관관계 도출을 위한 산점도 시각화  
+<img width="1352" height="1447" alt="image" src="https://github.com/user-attachments/assets/ce7eae7c-2717-42b2-ba13-d3988e7ed84a" />  
 
-        1) 사용 컬럼 : 총 리뷰 수, 12개월 리뷰 수, 30일 리뷰 수, 작년 1년 리뷰 수, 첫 리뷰 날짜, 마지막 리뷰 날짜, 첫 리뷰 후 지난 시간, price
-
-        2) 시각화 내용 : 사용 컬럼과 가격의 상관계수 히트맵
-        
-        3) 시각화 목적 : 사용 컬럼과 가격의 상관관계 분석
-
-  
-
-<img width="1352" height="1447" alt="image" src="https://github.com/user-attachments/assets/ce7eae7c-2717-42b2-ba13-d3988e7ed84a" />
-
-        1) 사용 컬럼 : 총 리뷰 수, 12개월 리뷰 수, 30일 리뷰 수, 작년 1년 리뷰 수, 첫 리뷰 날짜, 마지막 리뷰 날짜, 첫 리뷰 후 지난 시간, price
-
-        2) 시각화 내용 : 사용 컬럼과 가격의 산점도
-  
-        3) 시각화 목적 : 컬럼의 분포 및 상관 관계 시각적 확인
-  
-
+📌 로그화된 리뷰 수 컬럼과 가격의 상관관계 도출을 위한 히트맵 시각화
 <img width="774" height="654" alt="image" src="https://github.com/user-attachments/assets/a1b822c3-c3e2-49c7-8cf3-2b99b5b35696" />
 
-        1) 사용 컬럼 : 로그화 된(총 리뷰 수, 12개월 리뷰 수, 30일 리뷰 수, 작년 1년 리뷰 수), 첫 리뷰 날짜, 마지막 리뷰 날짜, 첫 리뷰 후 지난 시간, price, 로그화 된 price
-  
-        2) 시각화 내용 : 사용 컬럼과 가격의 상관계수 히트맵
-  
-        3) 시각화 목적 : 로그화 된 컬럼과 가격의 상관관계 분석
-
-
-    5) amenities - 숙소 편의시설 칼럼
+📌 amenities - 숙소 편의시설 칼럼
         
-        1) 편의시설 개수별 가격 평균
+1) 편의시설 개수별 가격 평균
 <img width="1619" height="523" alt="image" src="https://github.com/user-attachments/assets/870ee7e2-93f7-437c-97cd-c9148fbc30a2" />
 
-        2) 카테고리화 이후 가격 평균
+2) 카테고리화 이후 가격 평균
 <img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />
 
 
@@ -156,9 +144,9 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     
 **5. 데이터 정제 및 전처리**
     
-    1) review_scores_rating 제외 평점 관련 칼럼 모두 제거
+📌 review_scores_rating 제외 평점 관련 칼럼 모두 제거
     
-    2) 위도, 경도 칼럼 제거
+📌 위도, 경도 칼럼 제거
     
-    3) 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
+📌 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />
