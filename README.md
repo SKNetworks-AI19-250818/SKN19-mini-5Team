@@ -23,7 +23,7 @@ EDA / ML mini project 5Team
 | 분야 |	기술 |
 |------|---------|
 |언어 |  python 3.12|
-|개발 환경|	Jupyter Notebook| 
+|개발 환경|	VS Code| 
 |데이터 처리|	Pandas, NumPy|
 |시각화|	Matplotlib, Seaborn|
 |버전 관리|github|
