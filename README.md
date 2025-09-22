@@ -47,7 +47,9 @@ EDA / ML mini project 5Team
 - 데이터 출처: [Airbnb](https://insideairbnb.com/)
 
 <br><br>
-### 🪴 EDA
+### 🪴 EDA  
+<br>
+
 **0. 프로젝트 방향 선정**
 - 숙소값에 큰 영향을 미치는 날짜별 가격 데이터를 조회
 - 성수기에 따른 추가 가격은 에어비앤비 측에서 미제공
@@ -93,7 +95,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ⭐ 그 외 컬럼  
 
 📌 선정된 중요 컬럼의 결측치 제거 (ex. bathrooms, bedrooms, beds)  
-<img width="276" height="61" alt="Image" src="https://github.com/user-attachments/assets/0941ad01-6d45-4dcc-b6b6-6d4fb92ade78" />  
+ 
 <br>
 📌 선정된 중요 컬럼의 이상치 확인을 위한 각 컬럼이 갖고 있는 고유값과 그 개수 확인  
 <img width="1781" height="201" alt="Image" src="https://github.com/user-attachments/assets/98420866-dfdc-44cf-a0d4-f846a4f02e16" />  
@@ -102,7 +104,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="1777" height="390" alt="Image" src="https://github.com/user-attachments/assets/8db609e8-0b5f-4ca1-a726-d63a0cba9aba" />  
 <img width="1773" height="723" alt="Image" src="https://github.com/user-attachments/assets/5761df43-69a6-41aa-97b2-276245bc9a11" />  
 <br>
-📌 개수가 적어 유의미하지 않은 값을 이상치로 처리 (ex. bathrooms이나 bedrooms 개수가 15개를 초과하는 경우 등)  
+📌 개수가 적어 유의미하지 않은 값을 이상치로 처리하여 제거 (ex. bathrooms이나 bedrooms 개수가 15개를 초과하는 경우 등)  
 <img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5af" />  
 <br>
 <br>
