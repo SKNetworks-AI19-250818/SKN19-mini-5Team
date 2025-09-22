@@ -122,7 +122,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 📌 숙소 위치별 가격 관찰  
 <img width="974" height="697" alt="image" src="https://github.com/user-attachments/assets/3ad0af07-f3ef-4598-970d-dc1060a63662" />  
 
-📌 각 특성 컬럼과 price의 상관관계 도출을 위한 시각화
+📌 리뷰 관련 컬럼과 가격의 상관관계 도출을 위한 시각화
 <img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/015fb5d7-b731-4792-823b-51c36823809e" />    
 
 📌 각종 리뷰 수와 가격의 상관관계 도출을 위한 산점도 시각화  
@@ -133,10 +133,10 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 
 📌 amenities - 숙소 편의시설 칼럼
         
-1) 편의시설 개수별 가격 평균
+📍📍 편의시설 개수별 가격 평균
 <img width="1619" height="523" alt="image" src="https://github.com/user-attachments/assets/870ee7e2-93f7-437c-97cd-c9148fbc30a2" />
 
-2) 카테고리화 이후 가격 평균
+📍📍 카테고리화 이후 가격 평균
 <img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />
 
 
