@@ -64,9 +64,11 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 
 <img width="737" height="593" alt="Image" src="https://github.com/user-attachments/assets/ef8db27e-44f9-48a9-a0f8-fc52b4360cd9" />
 
+
 📌 데이터의 상위 5행 확인
 
 <img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />
+
 
 📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출
 
