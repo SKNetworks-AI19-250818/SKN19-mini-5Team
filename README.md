@@ -9,7 +9,7 @@ EDA / ML mini project 5Team
 | git |   [WhatSupYap](https://github.com/WhatSupYap)   |[pdyeon999](https://github.com/pdyeon999)  | [sangpiri](https://github.com/sangpiri)    |    [seungwon-sw](https://github.com/seungwon-sw)      |
 
 
-
+<br><br>
 ### 🧳 프로젝트 개요
 - 프로젝트 명: 도쿄 예비 여행객들을 위한 숙소값 예측
 - 프로젝트 소개: 에어비앤비에서 제공하는 도쿄 숙소 리스트를 기반으로 숙소 조건과 가격의 관계를 분석함
@@ -18,7 +18,7 @@ EDA / ML mini project 5Team
 
 - 에어비앤비에서 제공하는 데이터셋 분석으로 예약 가능 여부와 상관없이 숙소의 조건에 따른 가격 예측 가능
 
-
+<br><br>
 ### 💻 기술 스택
 | 분야 |	기술 |
 |------|---------|
@@ -28,7 +28,7 @@ EDA / ML mini project 5Team
 |시각화|	Matplotlib, Seaborn|
 |버전 관리|github|
 
-
+<br><br>
 ### 🪜 WBS
 |분류|상세업무|시작일|종료일|
 |---|---|---|---|
@@ -40,23 +40,24 @@ EDA / ML mini project 5Team
 |EDA|2-4. 컬럼 선정 |09.18|09.18|
 |EDA|2-5. 데이터 정제 및 전처리 |09.18|09.20|
 
-
+<br><br>
 ### 💭 데이터셋
 - 파일명: `tokyo_listings.csv.gz`
 - 주요 칼럼: 숙소별 room type, 침실 개수, 1박당 가격 등
 - 데이터 출처: [Airbnb](https://insideairbnb.com/)
 
-
+<br><br>
 ### 🪴 EDA
 **0. 프로젝트 방향 선정**
-    - 숙소값에 큰 영향을 미치는 날짜별 가격 데이터를 조회
-    - 성수기에 따른 추가 가격은 에어비앤비 측에서 미제공
-    - 
+- 숙소값에 큰 영향을 미치는 날짜별 가격 데이터를 조회
+- 성수기에 따른 추가 가격은 에어비앤비 측에서 미제공
+<br><br> 
 
 **1. 데이터 로드**
 ```
 df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ```
+<br>
 
 **2. 데이터 구조 및 기초 통계 확인**
 
@@ -65,11 +66,11 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br>
 
 📌 데이터의 상위 5행 확인  
-<img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />
 <br>
 
 📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출  
-<img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" />    
+<img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />    
+<br>
 <br>
     
 **3. 결측치 및 이상치 탐색**
@@ -77,17 +78,17 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ⭐ price 컬럼  
 
 📌 특성이 있는 그룹별로 price가 상이할 것으로 예상되므로, 그룹별 price 평균치 확인 후 price 결측치를 특성 그룹별 평균값으로 대체  
-<img width="217" height="198" alt="Image" src="https://github.com/user-attachments/assets/7b36904f-5379-4454-891c-9f5dd36e98af" />    
+<img width="1590" height="1189" alt="Image" src="https://github.com/user-attachments/assets/1e6da5ed-85d1-4770-9b0e-dc797364d143" /> 
 <br>
 📌 price 이상치 탐색  
-<img width="1190" height="1181" alt="Image" src="https://github.com/user-attachments/assets/32e86853-3777-4ba7-9239-11d93f0f24db" />  
+<img width="217" height="198" alt="Image" src="https://github.com/user-attachments/assets/7b36904f-5379-4454-891c-9f5dd36e98af" />  
 <br>
 📌 이상치 기준을 정하기 위해 각 기준별로 시각화
-<img width="1190" height="1181" alt="Image" src="https://github.com/user-attachments/assets/4d528d73-97e6-47ba-b12c-5d7a6af44fe8" />
+<img width="1190" height="1181" alt="Image" src="https://github.com/user-attachments/assets/4d528d73-97e6-47ba-b12c-5d7a6af44fe8" />  
 <br>
 📌 이상치 제거  
 <img width="273" height="61" alt="Image" src="https://github.com/user-attachments/assets/9a660760-704b-4b78-b7b0-85e599450687" />  
-<br>
+<br><br>
 
 ⭐ 그 외 컬럼  
 
@@ -103,6 +104,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br>
 📌 개수가 적어 유의미하지 않은 값을 이상치로 처리 (ex. bathrooms이나 bedrooms 개수가 15개를 초과하는 경우 등)  
 <img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5af" />  
+<br>
 <br>
     
 **4. 데이터 시각화를 통한 탐색**
@@ -137,8 +139,8 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="1619" height="523" alt="image" src="https://github.com/user-attachments/assets/870ee7e2-93f7-437c-97cd-c9148fbc30a2" />
 
 📍📍 카테고리화 이후 가격 평균
-<img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />
-
+<img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />  
+<br><br>
 
     
 **5. 데이터 정제 및 전처리**
