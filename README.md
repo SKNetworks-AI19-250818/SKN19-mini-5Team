@@ -153,3 +153,6 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     
 📌 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
+<br><br>
+✌️  
+<img width="182" height="140" alt="Image" src="https://github.com/user-attachments/assets/6d748d75-e15a-4034-a0b3-0ee090a7450d" />
