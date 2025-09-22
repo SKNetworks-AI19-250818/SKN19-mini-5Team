@@ -132,3 +132,24 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
         2) 시각화 내용 : 사용 컬럼과 가격의 상관계수 히트맵
   
         3) 시각화 목적 : 로그화 된 컬럼과 가격의 상관관계 분석
+
+
+    5) amenities - 숙소 편의시설 칼럼
+        
+        1) 편의시설 개수별 가격 평균
+<img width="1619" height="523" alt="image" src="https://github.com/user-attachments/assets/870ee7e2-93f7-437c-97cd-c9148fbc30a2" />
+
+        2) 카테고리화 이후 가격 평균
+<img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />
+
+
+    
+    
+**5. 데이터 정제 및 전처리**
+    
+    1) review_scores_rating 제외 평점 관련 칼럼 모두 제거
+    
+    2) 위도, 경도 칼럼 제거
+    
+    3) 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
+<img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />
