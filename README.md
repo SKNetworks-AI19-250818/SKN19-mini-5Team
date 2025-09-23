@@ -11,8 +11,9 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 🧳 프로젝트 개요
-![Image](https://github.com/user-attachments/assets/629d2a85-2f4c-405b-b045-58d4a521595e)
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0fb72bde-9f24-4665-af65-1c9070681686" />
 <br>
+
 - 프로젝트 명: 엔저로 인해 일본 여행이 증가하는 현재 trend를 고려한, 도쿄 예비 여행객들을 위한 숙소값 예측
 - 프로젝트 소개: 에어비앤비에서 제공하는 도쿄 숙소 리스트를 기반으로 숙소 조건과 가격의 관계를 분석함
 - 프로젝트 목표: 숙소 조건과 가격의 유의미한 관계를 포착하고, 나아가 조건별 숙소값을 예측
