@@ -43,7 +43,7 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 💭 데이터셋
-- 파일명: `tokyo_listings.csv.gz`
+- 파일명: `listings.csv.gz`
 - 주요 칼럼: 숙소가 위치한 지역, 숙소별 방 유형, 화장실/침실/침대 개수, 제공하는 편의시설, 리뷰 평점, 1박당 가격 등
 - 데이터 출처: [Airbnb](https://insideairbnb.com/)
 
