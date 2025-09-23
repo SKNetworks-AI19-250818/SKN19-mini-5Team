@@ -153,8 +153,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     
 📌 위도, 경도 칼럼 제거
     
-📌 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
-<img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5a화
+📌 범주형 데이터 라벨 인코딩 후 상관관계 도출을 위한 히트맵 시각화
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
 <br><br>
 
