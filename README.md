@@ -158,4 +158,4 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
 <br><br>
 ✌️  
-<img width="182" height="140" alt="Image" src="https://github.com/user-attachments/assets/6d748d75-e15a-4034-a0b3-0ee090a7450d" />
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/47ecdec6-3051-4fd1-b160-4909fd0d12ff" />
