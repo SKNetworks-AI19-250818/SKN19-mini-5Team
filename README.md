@@ -11,7 +11,7 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 🧳 프로젝트 개요
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d622f9c-a033-461a-8910-d5b3eaeba889" />
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d622f9c-a033-461a-8910-d5b3eaeba889" />  
 <br>
 
 - 프로젝트 명: 엔저로 인해 일본 여행이 증가하는 현재 trend를 고려한, 도쿄 예비 여행객들을 위한 숙소값 예측
