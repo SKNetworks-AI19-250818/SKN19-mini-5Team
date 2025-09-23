@@ -1,1 +1,7 @@
 *.env
+
+/EDA/data/listings_분석용.csv
+/EDA/data/amenities.txt
+
+/ML/data/listings_mean.csv
+/ML/data/listings_median.csv
