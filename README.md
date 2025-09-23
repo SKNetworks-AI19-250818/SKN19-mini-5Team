@@ -107,53 +107,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br>
 📌 개수가 적어 유의미하지 않은 값을 이상치로 처리하여 제거
 <br>
-<img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5af" />  
-<br>
-<br>
-    
-**4. 데이터 시각화를 통한 탐색**
-
-📌 총 수용인원, 화장실수, 침실수, 침대수 등과 가격 컬럼의 상관관계 도출을 위한 시각화  
-<img width="1990" height="1990" alt="image" src="https://github.com/user-attachments/assets/f98a4fe1-aeb5-442e-9017-65d8b2f1ef10" />  
-
-📌 지역별 가격 관계 시각화  
-<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/908d9c70-ea96-4176-94aa-ff34eee18ebb" />  
-
-📌 룸 타입별 가격 관계 시각화  
-<img width="1790" height="790" alt="image" src="https://github.com/user-attachments/assets/41741568-f418-45c1-a7bc-52e83ed4674d" />  
-
-📌 리뷰 평점 관련 칼럼 간 히트맵 도출  
-<img width="939" height="709" alt="image" src="https://github.com/user-attachments/assets/dad157a6-bea1-4a60-a27d-5b71c0114cc2" />  
-
-📌 숙소 위치별 가격 관찰  
-<img width="974" height="697" alt="image" src="https://github.com/user-attachments/assets/3ad0af07-f3ef-4598-970d-dc1060a63662" />  
-
-📌 리뷰 관련 컬럼과 가격의 상관관계 도출을 위한 시각화
-<img width="788" height="668" alt="image" src="https://github.com/user-attachments/assets/015fb5d7-b731-4792-823b-51c36823809e" />    
-
-📌 각종 리뷰 수와 가격의 상관관계 도출을 위한 산점도 시각화  
-<img width="1352" height="1447" alt="image" src="https://github.com/user-attachments/assets/ce7eae7c-2717-42b2-ba13-d3988e7ed84a" />  
-
-📌 로그화된 리뷰 수 컬럼과 가격의 상관관계 도출을 위한 히트맵 시각화
-<img width="774" height="654" alt="image" src="https://github.com/user-attachments/assets/a1b822c3-c3e2-49c7-8cf3-2b99b5b35696" />
-
-📌 amenities - 숙소 편의시설 칼럼
-        
-📍📍 편의시설 개수별 가격 평균
-<img width="1619" height="523" alt="image" src="https://github.com/user-attachments/assets/870ee7e2-93f7-437c-97cd-c9148fbc30a2" />
-
-📍📍 카테고리화 이후 가격 평균
-<img width="1619" height="544" alt="image" src="https://github.com/user-attachments/assets/97e22fb9-b58b-46f4-acfb-31dcc8bdedaa" />  
-<br><br>
-
-    
-**5. 데이터 정제 및 전처리**
-    
-📌 review_scores_rating 제외 평점 관련 칼럼 모두 제거
-    
-📌 위도, 경도 칼럼 제거
-    
-📌 범주형 데이터 라벨 인코딩 후 상관관계 heatmap
+<img width="267" height="57" alt="Image" src="https://github.com/user-attachments/assets/47f7faad-7495-4bf4-83e9-f3960c98a5a화
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
 <br><br>
 ✌️  
