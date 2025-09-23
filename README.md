@@ -97,7 +97,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ⭐ 그 외 컬럼  
 
 📌 선정된 중요 컬럼의 결측치 제거 (ex. bathrooms, bedrooms, beds)  
- 
+ <img width="272" height="61" alt="Image" src="https://github.com/user-attachments/assets/d3a52afa-9937-4fbf-9724-529d68dcde70" />  
 <br>
 📌 선정된 중요 컬럼의 이상치 확인을 위한 각 컬럼이 갖고 있는 고유값과 그 개수 확인  
 <img width="1781" height="201" alt="Image" src="https://github.com/user-attachments/assets/98420866-dfdc-44cf-a0d4-f846a4f02e16" />  
