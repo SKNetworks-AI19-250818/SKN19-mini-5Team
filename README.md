@@ -11,7 +11,7 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 🧳 프로젝트 개요
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d622f9c-a033-461a-8910-d5b3eaeba889" />  
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/e64074e4-cd3e-4169-a6af-0aaa654057ff" />
 <br>
 
 - 프로젝트 명: 엔저로 인해 일본 여행이 증가하는 현재 trend를 고려한, 도쿄 예비 여행객들을 위한 숙소값 예측
@@ -69,7 +69,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br><br>
 
 📌 데이터의 상위 5행 확인  
-<img width="1823" height="467" alt="Image" src="https://github.com/user-attachments/assets/f1239592-bc77-40f0-a720-d25ab67ab8d4" />
+<img width="1823" height="467" alt="Image" src="https://github.com/user-attachments/assets/4256555f-59e6-4cf9-9286-72c31334f8f3" />
 <br>
 📌 특성의 양이 방대하므로, 라벨인 price와 의미있는 컬럼(특성)만을 추출  
 <img width="621" height="765" alt="Image" src="https://github.com/user-attachments/assets/d1739e11-2ecd-4629-97f4-5d63f24926d3" />    
@@ -96,7 +96,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ⭐ 그 외 컬럼  
 
 📌 선정된 중요 컬럼의 결측치 제거 (ex. bathrooms, bedrooms, beds)  
-<img width="272" height="61" alt="Image" src="https://github.com/user-attachments/assets/bc293683-bae7-4d49-b90c-dd57aef1aa3f" />
+<img width="272" height="61" alt="Image" src="https://github.com/user-attachments/assets/ce57733b-7bdb-4a98-9d62-c598d9a89548" />
 <br>  
 📌 선정된 중요 컬럼의 이상치 확인을 위한 각 컬럼이 갖고 있는 고유값과 그 개수 확인  
 <img width="1781" height="201" alt="Image" src="https://github.com/user-attachments/assets/98420866-dfdc-44cf-a0d4-f846a4f02e16" />  
@@ -156,6 +156,5 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 📌 범주형 데이터 라벨 인코딩 후 상관관계 도출을 위한 히트맵 시각화
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
 <br><br>
-
 ✌️  
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/988f9fdd-76ba-4f90-8f8f-18f5d2e703e8" />
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d803dbb-378a-4d8c-91d1-2d1b7e5ceaca" />
