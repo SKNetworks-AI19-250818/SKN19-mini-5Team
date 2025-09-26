@@ -1,4 +1,5 @@
 *.env
+*.pyc
 
 /EDA/data/*.txt
 /EDA/data/*.csv
