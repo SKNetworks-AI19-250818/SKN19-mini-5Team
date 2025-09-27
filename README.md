@@ -23,11 +23,11 @@ EDA / ML mini project 5Team
 ### 💻 기술 스택
 | 분야 |	기술 |
 |------|---------|
-|언어 |  python 3.12|
-|개발 환경|	VS Code| 
-|데이터 처리|	Pandas, NumPy|
-|시각화|	Matplotlib, Seaborn|
-|버전 관리|github|
+|언어 | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt='python' width='20'/> python 3.12|
+|개발 환경| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt='VSCode' width='20'/> VSCode| 
+|데이터 처리|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt='Pandas' width='20'/> Pandas, <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt='NumPy' width='20'/> NumPy|
+|시각화|	<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt='Matplotlib' width='20'/> Matplotlib, <img src="https://img.shields.io/badge/-Seaborn-green?logo=python&logoColor=white" height="20"/> Seaborn|
+|버전 관리|<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt='github' width='20'/> github|
 
 <br><br>
 ### 🪜 WBS
