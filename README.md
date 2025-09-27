@@ -1,3 +1,4 @@
+![tokyo-4436914_1920](https://github.com/user-attachments/assets/c7474e97-ed45-4600-8614-ad0a08b01c4e)
 ### SKN19-mini-5Team
 EDA / ML mini project 5Team
 
