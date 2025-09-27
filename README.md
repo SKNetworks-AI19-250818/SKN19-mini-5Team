@@ -11,7 +11,8 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 🧳 프로젝트 개요
-![tokyo-4436914_1920](https://github.com/user-attachments/assets/c7474e97-ed45-4600-8614-ad0a08b01c4e)
+![imperial-palace-tokyo-9603413_1920](https://github.com/user-attachments/assets/0c884a0f-afeb-469c-8a85-42ad7a3974d7)
+
 
 
 - 프로젝트 명: 엔저로 인해 일본 여행이 증가하는 현재 trend를 고려한, 도쿄 예비 여행객들을 위한 숙소값 예측
