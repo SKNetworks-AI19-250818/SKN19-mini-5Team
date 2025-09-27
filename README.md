@@ -161,8 +161,7 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 📌 범주형 데이터 라벨 인코딩 후 상관관계 도출을 위한 히트맵 시각화
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
 <br><br>
-✌️  
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d803dbb-378a-4d8c-91d1-2d1b7e5ceaca" />
+
 
 1️⃣2️⃣3️⃣
 
@@ -186,3 +185,9 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 | 박&nbsp;도&nbsp;연 |  | 
 | 이&nbsp;상&nbsp;혁 |  | 
 | 이&nbsp;승&nbsp;원 | 머신 러닝의 다양한 모델들을 사용해보며 성능과 특징을 비교해 볼 수 있었다. |
+
+
+
+
+✌️  
+<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d803dbb-378a-4d8c-91d1-2d1b7e5ceaca" />
