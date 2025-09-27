@@ -198,7 +198,7 @@ else:
 
         st.markdown("---")
 
-    # 버튼을 항상 표시하도록 수정
+    # 버튼을 항상 표시하도록 수정 # 수정된 부분
     with col3:
         if st.button("추가 옵션 선택", key='add_option'):
             st.session_state.extra_input = True
@@ -209,7 +209,7 @@ else:
      
 
     # 추가 옵션 선택 버튼을 눌렀을 때
-    if st.session_state.extra_input:
+    if st.session_state.extra_input: # 수정된 부분
         # 어매니티 칼럼 저장
         amnt_values = {k: 0 for k in amnt_default_value_dict}
         for k in selected_options:
@@ -242,10 +242,10 @@ else:
                     amnt_values[amnt[0]] = 1
 
         st.markdown("---")
-        if st.button("추가 옵션으로 예측 결과 보기", key='second_view'):
+        if st.button("추가 옵션으로 예측 결과 보기", key='second_view'): # 수정된 부분
             get_X = make_X(neighbourhood, room_type, accommodates,
                            bedrooms, beds, bathrooms, review_scores_rating,
-                           list(amnt_values.values()), first_date)
+                           list(amnt_values.values()), first_date)  # 수정된 부분
             
             pred = loaded_model.predict(np.array(get_X).reshape(1, -1))
             st.markdown("<h1 style='text-align: center;'>숙박비: 약 "+str(format(int(np.expm1(pred)*10), ','))+"원</h1>", unsafe_allow_html=True)
@@ -262,7 +262,7 @@ else:
 
         get_X = make_X(neighbourhood, room_type, accommodates,
                            bedrooms, beds, bathrooms, review_scores_rating,
-                           list(amnt_values.values()), first_date)
+                           list(amnt_values.values()), first_date)  # 수정된 부분
 
         pred = loaded_model.predict(np.array(get_X).reshape(1, -1))
         st.markdown("<h1 style='text-align: center;'>숙박비: 약 "+str(format(int(np.expm1(pred)*10), ','))+"원</h1>", unsafe_allow_html=True)
@@ -270,7 +270,7 @@ else:
         # 에어비앤비 사이트 링크
         st.write('에어비앤비 바로가기 >> https://www.airbnb.co.kr/')
         
-        # 다른 옵션 선택 버튼 추가
+        # 다른 옵션 선택 버튼 추가 # 수정된 부분
         if st.button("추가 옵션으로 다시 예측하기"):
             st.session_state.extra_input = True
             st.session_state.show_result = False
