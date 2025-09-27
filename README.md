@@ -1,4 +1,3 @@
-![tokyo-4436914_1920](https://github.com/user-attachments/assets/c7474e97-ed45-4600-8614-ad0a08b01c4e)
 ### SKN19-mini-5Team
 EDA / ML mini project 5Team
 
@@ -12,8 +11,8 @@ EDA / ML mini project 5Team
 
 <br><br>
 ### 🧳 프로젝트 개요
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/e64074e4-cd3e-4169-a6af-0aaa654057ff" />
-<br>
+![tokyo-4436914_1920](https://github.com/user-attachments/assets/c7474e97-ed45-4600-8614-ad0a08b01c4e)
+
 
 - 프로젝트 명: 엔저로 인해 일본 여행이 증가하는 현재 trend를 고려한, 도쿄 예비 여행객들을 위한 숙소값 예측
 - 프로젝트 소개: 에어비앤비에서 제공하는 도쿄 숙소 리스트를 기반으로 숙소 조건과 가격의 관계를 분석함
