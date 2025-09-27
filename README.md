@@ -163,3 +163,26 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br><br>
 ✌️  
 <img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d803dbb-378a-4d8c-91d1-2d1b7e5ceaca" />
+
+1️⃣2️⃣3️⃣
+
+### 4️⃣ Trouble shooting
+1) 김범섭
+
+2) 박도연
+
+3) 이상혁
+
+4) 이승원
+   - 문제 상황 : 피어슨 상관 계수 분석에서 X데이터의 특정 컬럼과 y(price)의 상관 계수가 낮게 나왔다. 하지만 이는 선형적 관계에 대한 반영이므로 비선형적 관계에 대한 가능성을 배제하기 어려웠다.
+   - 해결 : 비선형적 관계에 대해 학습을 할 수 있는 XGBoost, 랜덤 포레스트 등의 트리 기반 모델을 사용해 학습했다.
+
+
+
+### 5️⃣ 회고록
+| 이름  | 회고 |
+| ------ | --------------- |
+| 김&nbsp;범&nbsp;섭 |  |
+| 박&nbsp;도&nbsp;연 |  | 
+| 이&nbsp;상&nbsp;혁 |  | 
+| 이&nbsp;승&nbsp;원 | 머신 러닝의 다양한 모델들을 사용해보며 성능과 특징을 비교해 볼 수 있었다. |
