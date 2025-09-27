@@ -1,5 +1,6 @@
 *.env
 *.pyc
+*.jobilb
 
 /ML/assets/*.zip
 /ML/assets/*.jobilb
