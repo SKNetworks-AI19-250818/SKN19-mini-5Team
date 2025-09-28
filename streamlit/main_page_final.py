@@ -9,17 +9,14 @@ from datetime import date
 # 예측에 필요한 LightGBM 모델 파일 로드
 loaded_model = load('./assets/model_LGBMReg_r2_test_0.71.jobilb')
 
-# 스케일링에 필요한 StandardScaler 모델 파일 로드
-loaded_scaler = load('./assets/StandardScaler.joblib')
 
-
-# 1. neighbourhood_cleansed. 인덱스 접근
+# 1. neighbourhood_cleansed
 neighbourhood_json = pd.read_json('./assets/le_neighbourhood_cleansed.json')
 
-# 2. property_type. 인덱스 접근
+# 2. property_type
 property_type_json = pd.read_json('./assets/le_property_type.json')
 
-# 3. room_type. 인덱스 접근
+# 3. room_type
 room_type_json = pd.read_json('./assets/le_room_type.json')
 
 # 3-2. room -> property 매핑
@@ -28,7 +25,7 @@ room_to_property = {'Entire home/apt': 'Entire rental unit',
  'Private room': 'Private room in home',
  'Shared room': 'Shared room in hostel'}
 
-# 4. 어매니티 기본값 딕셔너리. key 접근
+# 4. 어매니티 기본값 딕셔너리
 amnt_default_value_dict = {'amnt_self_checkin': 1,
  'amnt_instant_book': 0,
  'amnt_kitchen': 1,
@@ -64,7 +61,7 @@ base_date = date(2025, 6, 27)
 # 예측에 필요한 함수 정의
 def make_X(neighbourhood, room_type, accommodates,
             bedrooms, beds, bathrooms, review_scores_rating,
-            amnt_values): #, first_date): # first_date 제외
+            amnt_values):
     
     # 피쳐 초기화
     X = []
@@ -84,10 +81,7 @@ def make_X(neighbourhood, room_type, accommodates,
     # amnt_values 합치기
     X.extend(amnt_values)
 
-    # 4. 마지막 days_ 칼럼
-    # X.append((base_date - first_date).days)
-
-    return loaded_scaler.transform(np.array(X).reshape(1, -1))
+    return np.array(X).reshape(1, -1)
 
 st.set_page_config(layout="wide")
 
@@ -166,10 +160,6 @@ else:
 
 
     with col3:
-        # st.subheader("(3) 숙소 운영 기간 (첫 리뷰 기준)")
-
-        # first_date = st.date_input('날짜 지정', base_date, max_value=base_date)
-        
         # 3. 기본 편의시설 선택
         st.subheader("(3) 편의시설 유무 선택")
 
