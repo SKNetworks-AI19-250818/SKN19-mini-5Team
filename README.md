@@ -162,13 +162,30 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br><br>
 
 
-1️⃣2️⃣3️⃣
+1️⃣2️⃣
+
+### 3️⃣ 예측 페이지 구현
+1) 시작 화면
+<img width="2880" height="1332" alt="스크린샷1" src="https://github.com/user-attachments/assets/09ac0334-befe-4557-9136-f0e1b19a0731" />
+
+2) '선택 시작하기' 버튼을 눌렀을 때
+<img width="2880" height="1334" alt="스크린샷2" src="https://github.com/user-attachments/assets/935d3e1b-bf16-4a5c-9d5a-3001405231a2" />
+
+3-1) 옵션을 선택 후 '기본 옵션으로 예측 결과 보기' 버튼을 눌렀을 때
+<img width="2824" height="1487" alt="스크린샷3-1" src="https://github.com/user-attachments/assets/340a5330-1589-4ca9-be39-8746a0430cfa" />
+
+3-2-1) 옵션을 선택 후 '추가 옵션 선택' 버튼을 눌렀을 때
+<img width="2824" height="2278" alt="스크린샷3-2" src="https://github.com/user-attachments/assets/ee46daa2-74d4-420e-b552-70d5828dbe1d" />
+
+3-2-2) 추가 옵션 선택 후 '추가 옵션으로 예측 결과 보기' 버튼을 눌렀을 때
+<img width="2824" height="1421" alt="스크린샷3-3" src="https://github.com/user-attachments/assets/6f79a8c1-07c9-43f1-955d-3fcb0de9a255" />
 
 ### 4️⃣ Trouble shooting
 1) 김범섭
-
+   EDA 과정에서 amenities 컬럼이 중요하다 여겼으나 호스트가 직접 입력한 배열형태의 문자열으로 구성되어 학습용 데이터로 사용하기 어려웠다. 모든 데이터를 다운로드 받아보니 패턴이 보여 ast 라이브러리르 티용 텍스트를 분류하여 약 30종류로 카테고리로 분류를 진행하였고 분류된 데이터를 ML학습에 사용할 수 있었다.
 2) 박도연
-
+    - 문제 상황 : 같은 가상환경에서 lightgbm과 joblib을 `pip install`하고 `streamlit run`을 했음에도 streamlit 페이지에서 모델을 불러오지 못하는 문제가 있었다.
+    - 해결 : 설치 경로를 출력해본 결과, streamlit이 가상환경 내에 설치되어 있지 않아 환경 외부에 설치된 경로로 실행되고 있었고, 따라서 lightgbm, joblib 모듈을 찾지 못하는 문제였다. 가상환경에도 streamlit을 install함으로써 해결했고, 환경 분리의 중요성을 깨달았다.
 3) 이상혁
 
 4) 이승원
@@ -180,8 +197,8 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 ### 5️⃣ 회고록
 | 이름  | 회고 |
 | ------ | --------------- |
-| 김&nbsp;범&nbsp;섭 |  |
-| 박&nbsp;도&nbsp;연 |  | 
+| 김&nbsp;범&nbsp;섭 | EDA, ML 과정중 EDA과정을 주도적으로 진행하였다. EDA 추가 분석 덕분에 ML은 팀 동료들의 도움을 많이 받았다. ML 부분에서는 스스로 생각한 부분이 적은 것 같아 아쉽다. 프로젝트 마무리 후 전체적으로 리뷰가 필요할 듯 하다. |
+| 박&nbsp;도&nbsp;연 | 배뤘던 여러 모델을 이용해 실데이터를 학습시키고 성능을 평가해보았다. 그리고 간단하게라도 이용자에게 값을 직접 받아 피쳐 데이터로 변환해 예측을 수행하는 페이지를 구현했는데, 생각보다 많은 처리를 필요로 했다. 성능 높이기와 동시에 이용자에게 어느 정도의 값을 받고 나머지 피쳐는 어떤 식으로 처리해야 유용한 서비스가 될 수 있는지 고려하는 게 다음 프로젝트의 숙제일 것 같다. | 
 | 이&nbsp;상&nbsp;혁 |  | 
 | 이&nbsp;승&nbsp;원 | 머신 러닝의 다양한 모델들을 사용해보며 성능과 특징을 비교해 볼 수 있었다. |
 
