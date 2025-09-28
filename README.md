@@ -162,7 +162,23 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br><br>
 
 
-1️⃣2️⃣3️⃣
+1️⃣2️⃣
+
+### 3️⃣ 예측 페이지 구현
+1) 시작 화면
+<img width="2880" height="1332" alt="스크린샷1" src="https://github.com/user-attachments/assets/09ac0334-befe-4557-9136-f0e1b19a0731" />
+
+2) '선택 시작하기' 버튼을 눌렀을 때
+<img width="2880" height="1334" alt="스크린샷2" src="https://github.com/user-attachments/assets/935d3e1b-bf16-4a5c-9d5a-3001405231a2" />
+
+3-1) 옵션을 선택 후 '기본 옵션으로 예측 결과 보기' 버튼을 눌렀을 때
+<img width="2824" height="1487" alt="스크린샷3-1" src="https://github.com/user-attachments/assets/340a5330-1589-4ca9-be39-8746a0430cfa" />
+
+3-2-1) 옵션을 선택 후 '추가 옵션 선택' 버튼을 눌렀을 때
+<img width="2824" height="2278" alt="스크린샷3-2" src="https://github.com/user-attachments/assets/ee46daa2-74d4-420e-b552-70d5828dbe1d" />
+
+3-2-2) 추가 옵션 선택 후 '추가 옵션으로 예측 결과 보기' 버튼을 눌렀을 때
+<img width="2824" height="1421" alt="스크린샷3-3" src="https://github.com/user-attachments/assets/6f79a8c1-07c9-43f1-955d-3fcb0de9a255" />
 
 ### 4️⃣ Trouble shooting
 1) 김범섭
