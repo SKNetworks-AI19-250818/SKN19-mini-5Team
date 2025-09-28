@@ -169,28 +169,29 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <img width="980" height="215" alt="Image" src="https://github.com/user-attachments/assets/1d6d33dc-8bb7-46ec-9e95-a8e93bc201b9" />   
   
 2) 피처 엔지니어링을 통한 파생 특성 생성  
+   (단, 모델링 사전 테스트시 r2값에 큰 영향없고 특성 중요도 떨어지므로, 모델링시는 사용하지 않음) 
 <img width="802" height="129" alt="Image" src="https://github.com/user-attachments/assets/f4bf3a1f-9849-443c-9eeb-c25f3f9517d9" />  
 
   
 ### 2️⃣ 모델링  
 1) 학습과 평가 데이터 분리  
 
-2) 모델링 전, 특성 데이터의 Stadard Scaling 진행 / 라벨 데이터의 값이 크므로, 로그화 진행    
+2) 라벨 데이터의 값이 크므로, 로그화 진행    
   
 3) 모델 선택 : 앙상블 모델 中 LightGBM
 <img width="692" height="458" alt="Image" src="https://github.com/user-attachments/assets/c80e3a75-9ca0-4aa0-b981-e962029e0804" />  
   
 4) 1차 모델링 결과 (cv=3으로 진행한 경우)
-<img width="578" height="44" alt="Image" src="https://github.com/user-attachments/assets/97ba3ce5-bff6-4ded-9521-b087e6b68d59" />  
+<img width="581" height="48" alt="Image" src="https://github.com/user-attachments/assets/881a8dce-080a-40d9-9bcf-45c1a2ea9dcc" />  
 
 5) 교차 검증 진행 (cv=5로 진행)  
-<img width="498" height="374" alt="Image" src="https://github.com/user-attachments/assets/a5970145-7171-4956-97c3-29c592443c6c" />  
+<img width="634" height="377" alt="Image" src="https://github.com/user-attachments/assets/137168bb-0897-4618-94a0-e1d18c5545ee" />  
 
 6) 2차 모델링 결과  
-<img width="845" height="50" alt="Image" src="https://github.com/user-attachments/assets/b052594f-72e6-46ca-898e-1d3f0fd5e812" />  
+<img width="842" height="52" alt="Image" src="https://github.com/user-attachments/assets/14ec443e-5028-473c-a87b-98d1516098b0" />  
 
 7) 모델링 후 특성 중요도 확인  
-<img width="1026" height="697" alt="Image" src="https://github.com/user-attachments/assets/155751d3-af75-4cf4-8879-b5419895548c" />  
+<img width="1036" height="697" alt="Image" src="https://github.com/user-attachments/assets/b4543a8a-94fe-471f-98a5-e6b47a3b8af9" />  
 
   
 ### 3️⃣ 예측 페이지 구현
