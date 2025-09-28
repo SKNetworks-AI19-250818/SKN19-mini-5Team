@@ -6,8 +6,11 @@ from joblib import load
 from datetime import date
 
 
-# 예측에 필요한 .json 파일 로드
+# 예측에 필요한 LightGBM 모델 파일 로드
 loaded_model = load('./assets/model_LGBMReg_r2_test_0.71.jobilb')
+
+# 스케일링에 필요한 StandardScaler 모델 파일 로드
+loaded_scaler = load('./assets/StandardScaler.joblib')
 
 
 # 1. neighbourhood_cleansed. 인덱스 접근
@@ -54,14 +57,14 @@ amnt_default_value_dict = {'amnt_self_checkin': 1,
  'amnt_smoke_alarm': 1,
  'amnt_carbon_monoxide_alarm': 0}
 
-# 기준 날짜 (데이터 업로드 날짜) 정의
+# 5. 기준 날짜 (데이터 업로드 날짜) 정의
 base_date = date(2025, 6, 27)
 
 
 # 예측에 필요한 함수 정의
 def make_X(neighbourhood, room_type, accommodates,
             bedrooms, beds, bathrooms, review_scores_rating,
-            amnt_values): #, first_date): # forst_date 제외
+            amnt_values): #, first_date): # first_date 제외
     
     # 피쳐 초기화
     X = []
@@ -84,7 +87,7 @@ def make_X(neighbourhood, room_type, accommodates,
     # 4. 마지막 days_ 칼럼
     # X.append((base_date - first_date).days)
 
-    return X
+    return loaded_scaler.transform(np.array(X).reshape(1, -1))
 
 st.set_page_config(layout="wide")
 
@@ -142,7 +145,7 @@ else:
     with col1:
         st.subheader("(1) 지역, 타입, 인원 선택")
 
-        # 1. 지역, 타입, 수용인원
+        # 1. 지역, 타입, 수용인원 선택
         neighbourhood = st.selectbox("숙소 지역 선택", neighbourhood_json)
         room_type = st.selectbox("숙소 타입 선택", room_type_json)
         
@@ -153,7 +156,7 @@ else:
     with col2:
         st.subheader("(2) 방 옵션, 평점 선택")
 
-        # 2. 침실 수, 침대 수, 화장실 수, 점수 평균
+        # 2. 침실 수, 침대 수, 화장실 수, 점수 평균 선텍
         bedrooms = st.number_input("침실 수 선택(0~10)", 0, 10)
         beds = st.number_input("침대 개수 선택(0~25)", 0, 25)
         bathrooms = st.number_input("화장실 수 선택(0~10)", 0, 10)
@@ -167,6 +170,7 @@ else:
 
         # first_date = st.date_input('날짜 지정', base_date, max_value=base_date)
         
+        # 3. 기본 편의시설 선택
         st.subheader("(3) 편의시설 유무 선택")
 
         self_checkin = st.checkbox("셀프 체크인")
@@ -237,7 +241,7 @@ else:
                            bedrooms, beds, bathrooms, review_scores_rating,
                            list(amnt_values.values()))#, first_date)  # first_date 제외
             
-            pred = loaded_model.predict(np.array(get_X).reshape(1, -1))
+            pred = loaded_model.predict(get_X)
             st.markdown("<h1 style='text-align: center;'>숙박비: 약 "+str(format(int(np.expm1(pred)*10), ','))+"원</h1>", unsafe_allow_html=True)
 
             # 에어비앤비 사이트 링크
@@ -254,13 +258,13 @@ else:
                            bedrooms, beds, bathrooms, review_scores_rating,
                            list(amnt_values.values()))#, first_date)  # first_date 제외
 
-        pred = loaded_model.predict(np.array(get_X).reshape(1, -1))
+        pred = loaded_model.predict(get_X)
         st.markdown("<h1 style='text-align: center;'>숙박비: 약 "+str(format(int(np.expm1(pred)*10), ','))+"원</h1>", unsafe_allow_html=True)
 
         # 에어비앤비 사이트 링크
         st.write('에어비앤비 바로가기 >> https://www.airbnb.co.kr/')
         
-        # 다른 옵션 선택 버튼 추가 # 수정된 부분
+        # 다른 옵션 선택 버튼 추가
         if st.button("추가 옵션으로 다시 예측하기"):
             st.session_state.extra_input = True
             st.session_state.show_result = False
