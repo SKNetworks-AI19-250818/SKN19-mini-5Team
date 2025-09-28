@@ -162,14 +162,14 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 <br>
 
 📌 데이터 전처리 완료 직후 info  
-<img width="489" height="531" alt="Image" src="https://github.com/user-attachments/assets/1801432b-dfd0-4efe-9801-93123e27e54a" />
+<img width="489" height="531" alt="Image" src="https://github.com/user-attachments/assets/5ed4dc40-7ed7-43e0-be3e-8847617d66f2" />  
 
 ### 1️⃣ 2차 데이터 전처리 진행  
 1) 문자열 타입인 컬럼의 데이터 변환 : 라벨 인코딩 진행  
-<img width="980" height="215" alt="Image" src="https://github.com/user-attachments/assets/d75c2c48-e930-4bc2-ab0d-e518893e3790" />  
+<img width="980" height="215" alt="Image" src="https://github.com/user-attachments/assets/1d6d33dc-8bb7-46ec-9e95-a8e93bc201b9" />   
   
 2) 피처 엔지니어링을 통한 파생 특성 생성  
-<img width="802" height="129" alt="Image" src="https://github.com/user-attachments/assets/a15c4458-c40c-4c0a-9c9f-8d58943ed197" />  
+<img width="802" height="129" alt="Image" src="https://github.com/user-attachments/assets/f4bf3a1f-9849-443c-9eeb-c25f3f9517d9" />  
 
   
 ### 2️⃣ 모델링  
@@ -178,19 +178,19 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 2) 모델링 전, 특성 데이터의 Stadard Scaling 진행 / 라벨 데이터의 값이 크므로, 로그화 진행    
   
 3) 모델 선택 : 앙상블 모델 中 LightGBM
-<img width="692" height="458" alt="Image" src="https://github.com/user-attachments/assets/3ff510ef-2dab-4426-9ec7-d2f2495d0b4e" />
+<img width="692" height="458" alt="Image" src="https://github.com/user-attachments/assets/c80e3a75-9ca0-4aa0-b981-e962029e0804" />  
   
 4) 1차 모델링 결과 (cv=3으로 진행한 경우)
-<img width="578" height="44" alt="Image" src="https://github.com/user-attachments/assets/48cc174f-b979-4843-9f53-5d8c3d66f2ae" />
+<img width="578" height="44" alt="Image" src="https://github.com/user-attachments/assets/97ba3ce5-bff6-4ded-9521-b087e6b68d59" />  
 
 5) 교차 검증 진행 (cv=5로 진행)  
-<img width="498" height="374" alt="Image" src="https://github.com/user-attachments/assets/0ddc0923-3177-4416-9851-fb92c77ce9f1" />
+<img width="498" height="374" alt="Image" src="https://github.com/user-attachments/assets/a5970145-7171-4956-97c3-29c592443c6c" />  
 
 6) 2차 모델링 결과  
-<img width="845" height="50" alt="Image" src="https://github.com/user-attachments/assets/3c5eaa55-9985-4874-9441-5dfa816596f7" />  
+<img width="845" height="50" alt="Image" src="https://github.com/user-attachments/assets/b052594f-72e6-46ca-898e-1d3f0fd5e812" />  
 
 7) 모델링 후 특성 중요도 확인  
-<img width="1026" height="697" alt="Image" src="https://github.com/user-attachments/assets/460879f6-ac18-4330-ac2f-e13985c668d6" />  
+<img width="1026" height="697" alt="Image" src="https://github.com/user-attachments/assets/155751d3-af75-4cf4-8879-b5419895548c" />  
 
   
 ### 3️⃣ 예측 페이지 구현
