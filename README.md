@@ -159,11 +159,40 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
     
 📌 범주형 데이터 라벨 인코딩 후 상관관계 도출을 위한 히트맵 시각화
 <img width="784" height="658" alt="image" src="https://github.com/user-attachments/assets/07267193-8b0b-4d6e-b629-c1eb0780140d" />  
-<br><br>
+<br>
 
+📌 데이터 전처리 완료 직후 info  
+<img width="489" height="531" alt="Image" src="https://github.com/user-attachments/assets/1801432b-dfd0-4efe-9801-93123e27e54a" />
 
-1️⃣2️⃣
+### 1️⃣ 2차 데이터 전처리 진행  
+1) 문자열 타입인 컬럼의 데이터 변환 : 라벨 인코딩 진행  
+<img width="980" height="215" alt="Image" src="https://github.com/user-attachments/assets/d75c2c48-e930-4bc2-ab0d-e518893e3790" />  
+  
+2) 피처 엔지니어링을 통한 파생 특성 생성  
+<img width="802" height="129" alt="Image" src="https://github.com/user-attachments/assets/a15c4458-c40c-4c0a-9c9f-8d58943ed197" />  
 
+  
+### 2️⃣ 모델링  
+1) 학습과 평가 데이터 분리  
+
+2) 모델링 전, 특성 데이터의 Stadard Scaling 진행 / 라벨 데이터의 값이 크므로, 로그화 진행    
+  
+3) 모델 선택 : 앙상블 모델 中 LightGBM
+<img width="692" height="458" alt="Image" src="https://github.com/user-attachments/assets/3ff510ef-2dab-4426-9ec7-d2f2495d0b4e" />
+  
+4) 1차 모델링 결과 (cv=3으로 진행한 경우)
+<img width="578" height="44" alt="Image" src="https://github.com/user-attachments/assets/48cc174f-b979-4843-9f53-5d8c3d66f2ae" />
+
+5) 교차 검증 진행 (cv=5로 진행)  
+<img width="498" height="374" alt="Image" src="https://github.com/user-attachments/assets/0ddc0923-3177-4416-9851-fb92c77ce9f1" />
+
+6) 2차 모델링 결과  
+<img width="845" height="50" alt="Image" src="https://github.com/user-attachments/assets/3c5eaa55-9985-4874-9441-5dfa816596f7" />  
+
+7) 모델링 후 특성 중요도 확인  
+<img width="1026" height="697" alt="Image" src="https://github.com/user-attachments/assets/460879f6-ac18-4330-ac2f-e13985c668d6" />  
+
+  
 ### 3️⃣ 예측 페이지 구현
 1) 시작 화면
 <img width="2880" height="1332" alt="스크린샷1" src="https://github.com/user-attachments/assets/09ac0334-befe-4557-9136-f0e1b19a0731" />
@@ -182,11 +211,16 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 
 ### 4️⃣ Trouble shooting
 1) 김범섭
-   EDA 과정에서 amenities 컬럼이 중요하다 여겼으나 호스트가 직접 입력한 배열형태의 문자열으로 구성되어 학습용 데이터로 사용하기 어려웠다. 모든 데이터를 다운로드 받아보니 패턴이 보여 ast 라이브러리르 티용 텍스트를 분류하여 약 30종류로 카테고리로 분류를 진행하였고 분류된 데이터를 ML학습에 사용할 수 있었다.
+    - 문제 상황 : EDA 과정에서 amenities 컬럼이 중요하다 여겼으나 호스트가 직접 입력한 배열형태의 문자열으로 구성되어 학습용 데이터로 사용하기 어려웠다.
+    - 해결 : 모든 데이터를 다운로드 받아보니 패턴이 보여 ast 라이브러리르 티용 텍스트를 분류하여 약 30종류로 카테고리로 분류를 진행하였고 분류된 데이터를 ML학습에 사용할 수 있었다.
+   
 2) 박도연
     - 문제 상황 : 같은 가상환경에서 lightgbm과 joblib을 `pip install`하고 `streamlit run`을 했음에도 streamlit 페이지에서 모델을 불러오지 못하는 문제가 있었다.
     - 해결 : 설치 경로를 출력해본 결과, streamlit이 가상환경 내에 설치되어 있지 않아 환경 외부에 설치된 경로로 실행되고 있었고, 따라서 lightgbm, joblib 모듈을 찾지 못하는 문제였다. 가상환경에도 streamlit을 install함으로써 해결했고, 환경 분리의 중요성을 깨달았다.
+     
 3) 이상혁
+    - 문제 상황 : 피처 엔지니어링 과정 중 파생 특성을 생성하면서, 해당 파생 특성을 생성할 때 사용한 특성 변수를 삭제하지 않고 모델링을 진행했더니 R2 점수는 상승했으나 과대적합이 더 심해지는 문제가 발생하였다. 또한 Grid Search를 통해 최적의 하이퍼 파라미터를 찾는 과정에서 너무 다양한 하이퍼 파라미터를 입력했더니, 출력 과정에서 시간이 상당히 오래 소요되었다.
+    - 해결 : 과대적합 방지를 위해 파생 특성을 생성할 때 사용한 특성 변수를 삭제하고 모델링을 진행하였다. 특성 변수들 간의 다중공선성 방지를 위해서라도, 피처 엔지니어링시 특성 변수들 간의 관계를 더 주의해야 함을 깨달았다. 또한 Grid Search를 통해 세밀한 하이퍼 파라미터를 찾는 것도 중요하지만, 출력 시간 단축을 위해 Random Search를 이용하였다.
 
 4) 이승원
    - 문제 상황 : 피어슨 상관 계수 분석에서 X데이터의 특정 컬럼과 y(price)의 상관 계수가 낮게 나왔다. 하지만 이는 선형적 관계에 대한 반영이므로 비선형적 관계에 대한 가능성을 배제하기 어려웠다.
@@ -199,11 +233,5 @@ df = pd.read_csv('./data/listings.csv.gz', compression='gzip')
 | ------ | --------------- |
 | 김&nbsp;범&nbsp;섭 | EDA, ML 과정중 EDA과정을 주도적으로 진행하였다. EDA 추가 분석 덕분에 ML은 팀 동료들의 도움을 많이 받았다. ML 부분에서는 스스로 생각한 부분이 적은 것 같아 아쉽다. 프로젝트 마무리 후 전체적으로 리뷰가 필요할 듯 하다. |
 | 박&nbsp;도&nbsp;연 | 배뤘던 여러 모델을 이용해 실데이터를 학습시키고 성능을 평가해보았다. 그리고 간단하게라도 이용자에게 값을 직접 받아 피쳐 데이터로 변환해 예측을 수행하는 페이지를 구현했는데, 생각보다 많은 처리를 필요로 했다. 성능 높이기와 동시에 이용자에게 어느 정도의 값을 받고 나머지 피쳐는 어떤 식으로 처리해야 유용한 서비스가 될 수 있는지 고려하는 게 다음 프로젝트의 숙제일 것 같다. | 
-| 이&nbsp;상&nbsp;혁 |  | 
+| 이&nbsp;상&nbsp;혁 | 모델링에 집중을 했었는데 모델링 결과를 이용해 라벨값을 예측해보니, 데이터 전처리의 중요성을 더 실감하게 되었다. 데이터에 대한 도메인 지식을 높이고 그를 통해 올바른 데이터 정제를 해야 좋은 모델을 도출할 수 있는 것 같다. | 
 | 이&nbsp;승&nbsp;원 | 머신 러닝의 다양한 모델들을 사용해보며 성능과 특징을 비교해 볼 수 있었다. |
-
-
-
-
-✌️  
-<img width="553" height="369" alt="Image" src="https://github.com/user-attachments/assets/0d803dbb-378a-4d8c-91d1-2d1b7e5ceaca" />
