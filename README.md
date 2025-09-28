@@ -3,7 +3,7 @@ EDA / ML mini project 5Team
 
 # 도쿄 숙소값 예측 프로젝트
 
-### 🙋 팀 소개
+### 🙋 "여권어디있지" 팀 소개
 | 이름    | 김범섭 |  박도연  |  이상혁  |  이승원   |
 | ------- | -------|----------|----------|---------- |
 | git |   [WhatSupYap](https://github.com/WhatSupYap)   |[pdyeon999](https://github.com/pdyeon999)  | [sangpiri](https://github.com/sangpiri)    |    [seungwon-sw](https://github.com/seungwon-sw)      |
